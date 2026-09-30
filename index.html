@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SkyCheck – Live Weather Search</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Sora:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="day">
+  <main class="app">
+    <header class="top">
+      <h1>SkyCheck</h1>
+      <p>Live weather for any city in the world.</p>
+    </header>
+
+    <form id="search-form" class="search" autocomplete="off" novalidate>
+      <label for="city" class="sr-only">City name</label>
+      <input id="city" name="city" type="text" placeholder="Search a city, e.g. Karachi or Paris, France" maxlength="80">
+      <button id="search-btn" type="submit">Search</button>
+    </form>
+
+    <section class="recent" id="recent-wrap" hidden>
+      <h2>Recent searches</h2>
+      <div id="recent-list" class="chips"></div>
+    </section>
+
+    <section id="status" class="status" aria-live="polite"></section>
+    <section id="result" class="result" aria-live="polite"></section>
+
+    <footer class="foot">Data from <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> — free, no API key needed.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
